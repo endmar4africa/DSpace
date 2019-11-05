@@ -49,6 +49,17 @@
          <required></required>
        </field>
 
+     
+    <field>
+         <dc-schema>nbi</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>affiliation</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Author affiliations</label>
+         <input-type>onebox</input-type>
+         <hint>Enter author affiliations, or enter the full name of the institutions that the author(s) work for individually).</hint>
+         <required></required>
+       </field>
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>title</dc-element>
@@ -141,7 +152,18 @@ it, please enter the types and the actual numbers or codes.</hint>
          <required></required>
        </field>
 
+
        <field>
+          <dc-schema>nbi</dc-schema>
+          <dc-element>identifier</dc-element>
+          <dc-qualifier>status</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Accessibility status</label>
+          <input-type value-pairs-name="common_status_identifier">dropdown</input-type>
+          <hint>Please select either Open Access or Limited Access.</hint>
+          <required></required>
+        </field>
+      <field>
          <dc-schema>dc</dc-schema>
          <dc-element>language</dc-element>
          <dc-qualifier>iso</dc-qualifier>
@@ -164,8 +186,42 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>twobox</input-type>
          <hint>Enter appropriate subject keywords or phrases. </hint>
          <required></required>
-         <vocabulary>srsc</vocabulary>
+         <vocabulary></vocabulary>
        </field>
+
+       <field>
+          <dc-schema>nbi</dc-schema>
+          <dc-element>theme</dc-element>
+          <dc-qualifier>nbi</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Themes</label>
+          <input-type value-pairs-name="theme">dropdown</input-type>
+          <hint></hint>
+          <required></required>
+        </field>
+ 
+        <field>
+          <dc-schema>nbi</dc-schema>
+          <dc-element>coverage</dc-element>
+          <dc-qualifier>country</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Country</label>
+          <input-type value-pairs-name="countrylist">dropdown</input-type>
+          <hint>Select a country or countries within the scope of the item</hint>
+          <required></required>
+        </field>
+
+        
+       <field>
+          <dc-schema>nbi</dc-schema>
+          <dc-element>sub</dc-element>
+          <dc-qualifier>basin</dc-qualifier>
+          <repeatable>false</repeatable>
+          <label>Sub basin</label>
+          <input-type value-pairs-name="subbasin">dropdown</input-type>
+          <hint>Select the focus basin(s).</hint>
+          <required></required>
+        </field>
 
        <field>
          <dc-schema>dc</dc-schema>
@@ -260,7 +316,333 @@ it, please enter the types and the actual numbers or codes.</hint>
      </pair>
    </value-pairs>
 
-   <value-pairs value-pairs-name="common_types" dc-term="type">
+
+  <value-pairs value-pairs-name="common_status_identifier" dc-term="identifier_status">
+      <pair>
+        <displayed-value>N/A</displayed-value>
+        <stored-value></stored-value>
+      </pair>
+      <pair>
+        <displayed-value>Open Access</displayed-value>
+        <stored-value>Open Access</stored-value>
+      </pair>
+   
+    <pair>
+        <displayed-value>Limited Access</displayed-value>
+        <stored-value>Limited Access</stored-value>
+      </pair>
+    </value-pairs>
+
+    <value-pairs value-pairs-name="theme" dc-term="theme">
+
+      <pair>
+        <displayed-value>N/A</displayed-value>
+        <stored-value></stored-value>
+      </pair>
+
+
+      <pair>
+        <displayed-value>AGRICULTURE</displayed-value>
+        <stored-value>AGRICULTURE</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>ANNUAL REPORT</displayed-value>
+        <stored-value>ANNUAL REPORT</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>BASIN MONITORING</displayed-value>
+        <stored-value>BASIN MONITORING</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>BIODIVERSITY</displayed-value>
+        <stored-value>BIODIVERSITY</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>CAPACITY BUILDING</displayed-value>
+        <stored-value>CAPACITY BUILDING</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>COMMUNICATIONS</displayed-value>
+        <stored-value>COMMUNICATIONS</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>CLIMATE CHANGE</displayed-value>
+        <stored-value>CLIMATE CHANGE</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>ECOSYSTEM</displayed-value>
+        <stored-value>ECOSYSTEM</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>ENERGY</displayed-value>
+        <stored-value>ENERGY</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>ENVIRONMENT</displayed-value>
+        <stored-value>ENVIRONMENT</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>ENVIRONMENTAL STUDIES</displayed-value>
+        <stored-value>ENVIRONMENTAL STUDIES</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>FOOD SECURITY</displayed-value>
+        <stored-value>FOOD SECURITY</stored-value>
+      </pair>
+
+
+      <pair>
+        <displayed-value>GENDER MAINSTREAMING</displayed-value>
+        <stored-value>GENDER MAINSTREAMING</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>GIODATA AND GIS </displayed-value>
+        <stored-value>GIODATA AND GIS </stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>GROUND WATER</displayed-value>
+        <stored-value>GROUND WATER</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>GUIDELINES</displayed-value>
+        <stored-value>GUIDELINES</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>HYDROPOWER</displayed-value>
+        <stored-value>HYDROPOWER</stored-value>
+      </pair>
+
+     
+       <pair>
+        <displayed-value>IRRIGATION AND DRAINAGE</displayed-value>
+        <stored-value>IRRIGATION AND DRAINAGE</stored-value>
+       </pair>
+       
+       <pair>
+        <displayed-value>KNOWLEDGE AND INFORMATION</displayed-value>
+        <stored-value>KNOWLEDGE AND INFORMATION</stored-value>
+      </pair>
+
+
+      <pair>
+        <displayed-value>LIVELIHOODS</displayed-value>
+        <stored-value>LIVELIHOODS</stored-value>
+      </pair>
+
+         <pair>
+        <displayed-value>MODELING</displayed-value>
+        <stored-value>MODELING</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>MULTI-PURPOSE WATER RESOURCES STUDY</displayed-value>
+        <stored-value>MULTI-PURPOSE WATER RESOURCES STUDY</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>POWER TRADE</displayed-value>
+        <stored-value>POWER TRADE</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>POWER INTERCONNECTION</displayed-value>
+        <stored-value>POWER INTERCONNECTION</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>SOCIO-ECONOMIC ASSESSMENT</displayed-value>
+        <stored-value>SOCIO-ECONOMIC ASSESSMENT</stored-value>
+      </pair>
+       
+      <pair>
+        <displayed-value>SOILS</displayed-value>
+        <stored-value>SOILS</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>STAKEHOLDER ENGAGEMENT</displayed-value>
+        <stored-value>STAKEHOLDER ENGAGEMENT</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>STRATEGIC PLAN</displayed-value>
+        <stored-value>STRATEGIC PLAN</stored-value>
+      </pair>
+
+        <pair>
+        <displayed-value>WATER RESOURCE MANAGEMENT</displayed-value>
+        <stored-value>WATER RESOURCE MANAGEMENT</stored-value>
+      </pair>
+
+
+      <pair>
+        <displayed-value>WATER SECURITY</displayed-value>
+        <stored-value>WATER SECURITY</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>WATERSHED MANAGEMENT</displayed-value>
+        <stored-value>WATERSHED MANAGEMENT</stored-value>
+      </pair>
+
+
+        <pair>
+        <displayed-value>WATER DIPLOMACY</displayed-value>
+        <stored-value>WATER DIPLOMACY</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>WATER HARVESTING</displayed-value>
+        <stored-value>WATER HARVESTING</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>WATER POLICY</displayed-value>
+        <stored-value>WATER POLICY</stored-value>
+      </pair>
+  
+   </value-pairs>
+
+     
+   <value-pairs value-pairs-name="countrylist" dc-term="countrylist">
+
+       <pair>
+        <displayed-value>N/A</displayed-value>
+        <stored-value></stored-value>
+      </pair>
+      <pair>
+        <displayed-value>BURUNDI</displayed-value>
+        <stored-value>BURUNDI</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>CONGO, DR</displayed-value>
+        <stored-value>CONGO, DR</stored-value>
+      </pair>
+      <pair>
+        <displayed-value>EGYPT</displayed-value>
+        <stored-value>EGYPT</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>ETHIOPIA</displayed-value>
+        <stored-value>ETHIOPIA</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>KENYA</displayed-value>
+        <stored-value>KENYA</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>RWANDA</displayed-value>
+        <stored-value>RWANDA</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>SOUTH SUDAN</displayed-value>
+        <stored-value>SOUTH SUDAN</stored-value>
+      </pair>
+
+        <pair>
+        <displayed-value>SUDAN</displayed-value>
+        <stored-value>SUDAN</stored-value>
+      </pair>
+     
+      <pair>
+        <displayed-value>TANZANIA</displayed-value>
+        <stored-value>TANZANIA</stored-value>
+      </pair>
+
+     <pair>
+        <displayed-value>UGANDA</displayed-value>
+        <stored-value>UGANDA</stored-value>
+      </pair>
+
+   </value-pairs>
+
+
+   <value-pairs value-pairs-name="subbasin" dc-term="subbasin">
+
+
+       <pair>
+        <displayed-value>N/A</displayed-value>
+        <stored-value></stored-value>
+      </pair>
+      
+      <pair>
+        <displayed-value>BAHR EL GHAZAL</displayed-value>
+        <stored-value>BAHR EL GHAZAL</stored-value>
+      </pair>
+
+      <pair>
+        <displayed-value>BAHR EL JEBEL</displayed-value>
+        <stored-value>BAHR EL JEBEL</stored-value>
+      </pair>
+      
+      <pair>
+        <displayed-value>BARO-AKOBO-SOBAT</displayed-value>
+        <stored-value>BARO-AKOBO-SOBAT</stored-value>
+      </pair>
+     
+      <pair>
+        <displayed-value>BARO-AKOBO-SOBAT</displayed-value>
+        <stored-value>BARO-AKOBO-SOBAT</stored-value>
+      </pair>
+       
+      <pair>
+        <displayed-value> BLUE NILE</displayed-value>
+        <stored-value> BLUE NILE</stored-value>
+      </pair>
+
+       <pair>
+        <displayed-value>LAKE ALBERT</displayed-value>
+        <stored-value>LAKE ALBERT</stored-value>
+       </pair>
+
+       <pair>
+        <displayed-value>LAKE VICTORIA</displayed-value>
+        <stored-value>LAKE VICTORIA</stored-value>
+       </pair>
+             
+       <pair>
+        <displayed-value>MAIN NILE</displayed-value>
+        <stored-value>MAIN NILE</stored-value>
+       </pair>
+       
+       <pair>
+        <displayed-value>TEKEZE-SETIT-ATBARA</displayed-value>
+        <stored-value>TEKEZE-SETIT-ATBARA</stored-value>
+       </pair>
+       
+       <pair>
+        <displayed-value>VICTORIA NILE</displayed-value>
+        <stored-value>VICTORIA NILE</stored-value>
+       </pair>
+
+       <pair>
+        <displayed-value>WHITE NILE</displayed-value>
+        <stored-value>WHITE NILE</stored-value>
+       </pair>
+       
+   </value-pairs>
+
+
+  <value-pairs value-pairs-name="common_types" dc-term="type">
      <pair>
        <displayed-value>Animation</displayed-value>
        <stored-value>Animation</stored-value>
@@ -269,6 +651,12 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>Article</displayed-value>
        <stored-value>Article</stored-value>
      </pair>
+
+     <pair>
+        <displayed-value>Audio visual materials</displayed-value>
+        <stored-value>Audio visual materials</stored-value>
+      </pair>
+
      <pair>
        <displayed-value>Book</displayed-value>
        <stored-value>Book</stored-value>
@@ -277,22 +665,62 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>Book chapter</displayed-value>
        <stored-value>Book chapter</stored-value>
      </pair>
+
+      <pair>
+       <displayed-value>Boucher</displayed-value>
+       <stored-value>Boucher</stored-value>
+     </pair>
+
+      <pair>
+       <displayed-value>Bulletins</displayed-value>
+       <stored-value>Bulletins</stored-value>
+     </pair>
+
      <pair>
+       <displayed-value>CDS</displayed-value>
+       <stored-value>CDS</stored-value>
+     </pair>
+
+    <pair>
        <displayed-value>Dataset</displayed-value>
        <stored-value>Dataset</stored-value>
      </pair>
+
+     <pair>
+       <displayed-value>Documentaries</displayed-value>
+       <stored-value>Documentaries</stored-value>
+     </pair>
+    
+     <pair>
+       <displayed-value>Fact sheets</displayed-value>
+       <stored-value>Fact sheets</stored-value>
+     </pair>
+
+     <pair>
+       <displayed-value>Governance documents</displayed-value>
+       <stored-value>Governance documents</stored-value>
+     </pair>
+
+      <pair>
+       <displayed-value>Flyers</displayed-value>
+       <stored-value>Flyers</stored-value>
+     </pair>
+
+      <pair>
+        <displayed-value>Journal Article</displayed-value>
+        <stored-value>Journal Article</stored-value>
+      </pair>
+
      <pair>
        <displayed-value>Learning Object</displayed-value>
        <stored-value>Learning Object</stored-value>
      </pair>
+
      <pair>
        <displayed-value>Image</displayed-value>
        <stored-value>Image</stored-value>
      </pair>
-     <pair>
-       <displayed-value>Image, 3-D</displayed-value>
-       <stored-value>Image, 3-D</stored-value>
-     </pair>
+     
      <pair>
        <displayed-value>Map</displayed-value>
        <stored-value>Map</stored-value>
@@ -301,18 +729,52 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>Musical Score</displayed-value>
        <stored-value>Musical Score</stored-value>
      </pair>
+    
+    <pair>
+       <displayed-value>Planning document</displayed-value>
+       <stored-value>Planning document</stored-value>
+     </pair>
+
      <pair>
        <displayed-value>Plan or blueprint</displayed-value>
        <stored-value>Plan or blueprint</stored-value>
      </pair>
+
+       <pair>
+       <displayed-value>Policy document</displayed-value>
+       <stored-value>Policy document</stored-value>
+     </pair>
+
+      <pair>
+       <displayed-value>Policy briefs</displayed-value>
+       <stored-value>Policy briefs</stored-value>
+     </pair>
+
+      <pair>
+        <displayed-value>Poster</displayed-value>
+        <stored-value>Poster</stored-value>
+      </pair>
+
      <pair>
        <displayed-value>Preprint</displayed-value>
        <stored-value>Preprint</stored-value>
      </pair>
+
      <pair>
        <displayed-value>Presentation</displayed-value>
        <stored-value>Presentation</stored-value>
      </pair>
+
+    <pair>
+       <displayed-value>Project document</displayed-value>
+       <stored-value>Project document</stored-value>
+     </pair>
+  
+     <pair>
+        <displayed-value>Proceedings</displayed-value>
+        <stored-value>Proceedings</stored-value>
+      </pair>
+
      <pair>
        <displayed-value>Recording, acoustical</displayed-value>
        <stored-value>Recording, acoustical</stored-value>
@@ -333,10 +795,17 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>Technical Report</displayed-value>
        <stored-value>Technical Report</stored-value>
      </pair>
+
      <pair>
        <displayed-value>Thesis</displayed-value>
        <stored-value>Thesis</stored-value>
      </pair>
+
+     <pair>
+        <displayed-value>Training manual</displayed-value>
+        <stored-value>Training manual</stored-value>
+      </pair>
+     
      <pair>
        <displayed-value>Video</displayed-value>
        <stored-value>Video</stored-value>
