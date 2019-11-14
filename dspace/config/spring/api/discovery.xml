@@ -97,9 +97,18 @@
         <!--Which sidebar facets are to be displayed-->
         <property name="sidebarFacets">
             <list>
+                
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
+                <ref bean="searchFilterNBITheme"/>
+                <ref bean="searchFilterAffiliation" />
+                <ref bean="searchFilterSubbasin"/> 
+                <ref bean="searchFilterCountry" />
+                <ref bean="searchFilterStatus" />
+                <ref bean="searchFilterType" /> 
+                 
+              
 		        <ref bean="searchFilterContentInOriginalBundle"/>
             </list>
         </property>
@@ -108,11 +117,20 @@
         <!--The search filters which can be used on the discovery search page-->
         <property name="searchFilters">
             <list>
+                
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterNBITheme"/>
+                <ref bean="searchFilterAffiliation" />
+                <ref bean="searchFilterSubbasin"/> 
+                <ref bean="searchFilterCountry" />
+                <ref bean="searchFilterStatus" />
+                <ref bean="searchFilterType" /> 
+               
+
+	        <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterFileNameInOriginalBundle" />
                 <ref bean="searchFilterFileDescriptionInOriginalBundle" />
             </list>
@@ -150,7 +168,6 @@
         </property>
         <!--Default result per page  -->
         <property name="defaultRpp" value="10" />
-        <property name="maxRpp" value="100" />
         <property name="hitHighlightingConfiguration">
             <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightingConfiguration">
                 <property name="metadataFields">
@@ -210,10 +227,17 @@
         <!--Which sidebar facets are to be displayed (same as defaultConfiguration above)-->
         <property name="sidebarFacets">
             <list>
-                <ref bean="searchFilterAuthor" />
+               <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterNBITheme"/>
+                <ref bean="searchFilterAffiliation" />
+                <ref bean="searchFilterSubbasin"/> 
+                <ref bean="searchFilterCountry" />
+                <ref bean="searchFilterStatus" />
+                <ref bean="searchFilterType" /> 
+                
+	        <ref bean="searchFilterContentInOriginalBundle"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -225,6 +249,14 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
+                <ref bean="searchFilterNBITheme"/>
+                <ref bean="searchFilterAffiliation" />
+                <ref bean="searchFilterSubbasin"/> 
+                <ref bean="searchFilterCountry" />
+                <ref bean="searchFilterStatus" />
+                <ref bean="searchFilterType" /> 
+               
+             
 		        <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterFileNameInOriginalBundle" />
                 <ref bean="searchFilterFileDescriptionInOriginalBundle" />
@@ -424,7 +456,86 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
     </bean>
-    
+
+<bean id="searchFilterAffiliation" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="affiliation"/>
+        <property name="metadataFields">
+            <list>
+                <value>nbi.contributor.affiliation</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+ 
+
+<bean id="searchFilterNBITheme" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="nbi"/>
+        <property name="metadataFields">
+            <list>
+                <value>nbi.theme.nbi</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+
+<bean id="searchFilterSubbasin" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="basin"/>
+        <property name="metadataFields">
+            <list>
+                <value>nbi.sub.basin</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+<bean id="searchFilterStatus" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="status"/>
+        <property name="metadataFields">
+            <list>
+                <value>nbi.identifier.status</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+
+<bean id="searchFilterCountry" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="country"/>
+        <property name="metadataFields">
+            <list>
+                <value>nbi.coverage.country</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+
+<bean id="searchFilterType" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="type"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.type</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+ 
+
+  
     <bean id="searchFilterContentInOriginalBundle" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
         <property name="indexFieldName" value="has_content_in_original_bundle"/>
         <property name="metadataFields">
