@@ -2,8 +2,35 @@
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
-<head>DSpace Repository</head>
-<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
+<head>Welcome</head>
+
+<p>Are you using the most current critical knowledge and information on the Nile Basin water and related resources to make better decisions?
+NBI has generated transparent, unbiased and credible knowledge, data and information, which is available to all and increasingly shared through
+a web based platform Nile Basin Knowledge Repository hosted on D-space and is enriched with resources from its three centers.</p>
+
+<summary>
+ Access to the NBI knowledge Repository enables you to:
+ <list type="bullet">
+ <item>
+ <description>Enhance understanding of the Nile Basin water and related resources.</description>
+ </item>
+ <item>
+ <description>Keep your information current and accurate.</description>
+ </item>
+ <item>
+ <description>Strengthen dialogue on the Nile cooperation at National, Sub-regional and Regional levels.</description>
+ </item>
+ <item>
+ <description>Access reliable data for example on evapotranspiration in the Nile Basin.</description>
+ </item>
+ <item>
+<description>Share experience in integrated water resources management in the Nile Basin.</description>
+ </item>
+<item>
+ <description>Network with other international bodies working on transboundary issues.</description>
+</item>
+ </list>
+ </summary>
 </div>
 </body>
 <options/>
